@@ -5,13 +5,10 @@
 \title{Gera um gráfico com duas colunas (uma de número de indivíduos e uma
 de temperatura média) por localidade}
 \usage{
-temperatura(consultoria, campanha)
+temperatura(consultoria)
 }
 \arguments{
 \item{consultoria}{nome da tabela que será utilizada}
-
-\item{campanha}{seleciona a campanha de consultoria, quando não selecionada,
-inclui todas}
 }
 \value{
 um gráfico de número de espécies e temperatura

@@ -1,16 +1,17 @@
 #' Gera um gráfico com duas colunas (uma de número de indivíduos e uma
 #' de temperatura média) por localidade
 #'
-#' @param consultoria nome da tabela que será utilizada
+#' @param x
+#' @param localidade
+#' @param especie
+#' @param temperatura_c
 #'
 #' @return um gráfico de número de espécies e temperatura
 #' @export
 #'
-#' @examples temperatura()
-temperatura <- function(consultoria) {
-  consultoria <- readxl::read_excel("C:/Curso R/pacotes/tabela.xlsx") %>%
-    janitor::clean_names()
-  temperatura <- consultoria %>%
+#' @examples temperatura(consultoria)
+temperatura <- function(x, especie, temperatura_c) {
+temperatura <- x %>%
   dplyr::group_by(localidade) %>%
   dplyr::summarise('n' = dplyr::n_distinct(especie),
                    'temp_media' = round(mean(temperatura_c, na.rm=T)))

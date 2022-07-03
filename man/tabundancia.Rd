@@ -4,7 +4,7 @@
 \alias{tabundancia}
 \title{Gera uma tabela de abundância de espécies}
 \usage{
-tabundancia(consultoria, campanha)
+tabundancia(x, filtro_campanha)
 }
 \arguments{
 \item{consultoria}{nome da tabela que será utilizada}

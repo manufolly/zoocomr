@@ -4,12 +4,26 @@
 \alias{gabundancia}
 \title{Gera um gráfico de abundância de espécies}
 \usage{
-gabundancia(consultoria, effort)
+gabundancia(
+  x,
+  campanha,
+  especie,
+  fill = "#ADC6CB",
+  filtro_campanha = NULL,
+  theme_few,
+  axis.text,
+  axis.text.x,
+  axis.title
+)
 }
 \arguments{
-\item{consultoria}{nome da tabela que será utilizada}
+\item{x}{nome da tabela que será utilizada}
 
-\item{campanha}{seleciona a campanha de consultoria, quando não selecionada,
+\item{campanha}{coluna que designa o indicador ordinal referente a campanha}
+
+\item{especie}{coluna com a identificacao de todos os individuos coletados}
+
+\item{filtro_campanha}{seleciona a campanha de consultoria, quando não selecionada,
 inclui todas}
 }
 \value{
@@ -19,5 +33,6 @@ um gráfico
 Gera um gráfico de abundância de espécies
 }
 \examples{
-gabundancia()
+gabundancia(consultoria, filtro_campanha = "primeira")
+
 }
