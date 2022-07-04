@@ -1,10 +1,9 @@
 #' Gera um gráfico com duas colunas (uma de número de indivíduos e uma
 #' de temperatura média) por localidade
 #'
-#' @param x
-#' @param localidade
-#' @param especie
-#' @param temperatura_c
+#' @param x nome do data frame que será utilizado no arquivo
+#' @param especie coluna com a identificação de todos os indivíduos coletados
+#' @param temperatura_c coluna com a temperatura dos indivíduos coletados
 #'
 #' @return um gráfico de número de espécies e temperatura
 #' @export

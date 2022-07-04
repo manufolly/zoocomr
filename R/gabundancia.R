@@ -4,7 +4,7 @@
 #' @param filtro_campanha seleciona a campanha de consultoria, quando não selecionada,
 #' inclui todas
 #' @param campanha coluna que designa o indicador ordinal referente a campanha
-#' @param especie coluna com a identificacao de todos os individuos coletados
+#' @param especie coluna com a identificação de todos os indivíduos coletados
 #'
 #' @return um gráfico
 #' @export
