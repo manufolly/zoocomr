@@ -5,10 +5,29 @@
 \title{Gera uma tabela com os indices de riqueza (Margalef, Menhinick)
 e diversidade (Shannon, Simpson, Pielou)}
 \usage{
-riqueza(consultoria)
+riqueza(
+  x,
+  localidade = localidade,
+  especie = especie,
+  mutate_at,
+  diversidade,
+  Localidade = c("Chiador", "Duas Barras", "Macaé", "Nova Friburgo", "Sumidouro",
+    "Trajano de Moraes")
+)
 }
 \arguments{
-\item{consultoria}{nome da tabela que será utilizada}
+\item{x}{nome do data frame que será utilizado no arquivo}
+
+\item{localidade}{coluna com os locais de coleta}
+
+\item{especie}{coluna com a identificacao de todos os individuos coletados}
+
+\item{mutate_at}{mutate_at(c(2:{{69}}), as.numeric) deverá fornecer o número
+de colunas total de espécies da sua tabela}
+
+\item{diversidade}{função que produz a tabela com os indíces de diversidade e riqueza}
+
+\item{Localidade}{descrição das localidades da tabela final}
 }
 \value{
 uma tabela em excel
@@ -18,5 +37,5 @@ Gera uma tabela com os indices de riqueza (Margalef, Menhinick)
 e diversidade (Shannon, Simpson, Pielou)
 }
 \examples{
-riqueza()
+riqueza(consultoria)
 }

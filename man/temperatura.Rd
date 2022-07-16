@@ -5,10 +5,17 @@
 \title{Gera um gráfico com duas colunas (uma de número de indivíduos e uma
 de temperatura média) por localidade}
 \usage{
-temperatura(consultoria)
+temperatura(x, localidade, especie, temperatura_c)
 }
 \arguments{
-\item{consultoria}{nome da tabela que será utilizada}
+\item{x}{nome do data frame que será utilizado no arquivo}
+
+\item{localidade}{coluna que designa os locais onde os exemplares
+foram coletados e serão agrupados por essa coluna}
+
+\item{especie}{coluna com a identificação de todos os indivíduos coletados}
+
+\item{temperatura_c}{coluna com a temperatura dos indivíduos coletados}
 }
 \value{
 um gráfico de número de espécies e temperatura
@@ -18,5 +25,5 @@ Gera um gráfico com duas colunas (uma de número de indivíduos e uma
 de temperatura média) por localidade
 }
 \examples{
-temperatura()
+temperatura(consultoria)
 }

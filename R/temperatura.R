@@ -2,6 +2,8 @@
 #' de temperatura média) por localidade
 #'
 #' @param x nome do data frame que será utilizado no arquivo
+#' @param localidade coluna que designa os locais onde os exemplares
+#' foram coletados e serão agrupados por essa coluna
 #' @param especie coluna com a identificação de todos os indivíduos coletados
 #' @param temperatura_c coluna com a temperatura dos indivíduos coletados
 #'
@@ -9,7 +11,8 @@
 #' @export
 #'
 #' @examples temperatura(consultoria)
-temperatura <- function(x, especie, temperatura_c) {
+temperatura <- function(x, localidade, especie, temperatura_c)
+  {
 temperatura <- x %>%
   dplyr::group_by(localidade) %>%
   dplyr::summarise('n' = dplyr::n_distinct(especie),
@@ -21,4 +24,6 @@ fig <- plotly::plot_ly(temperatura, x = ~localidade, y = ~n,
                        type = 'bar', name = 'Número de indivíduos')
 fig <-fig %>%  plotly::add_trace(y = ~temp_media, name = 'Temperatura média')
 fig <- fig %>% plotly::layout(yaxis = list(title = 'Número de indivíduos'), barmode = 'group')
-fig}
+
+fig
+}

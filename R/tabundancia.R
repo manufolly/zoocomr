@@ -20,4 +20,6 @@ tabundancia <- function(x, campanha = campanha, especie = especie) {
     ) %>%
     dplyr::arrange({{especie}})
   tabela <- writexl::write_xlsx(abundancia, "C:/Curso R/pacotes/zoocomr/results/tabela.xlsx")
-  tabela}
+
+  tabela
+  }

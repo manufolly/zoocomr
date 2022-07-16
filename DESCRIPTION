@@ -4,7 +4,7 @@ Version: 0.0.0.9000
 Authors@R: 
     person("Manuella Folly", "follymga@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-5353-3906"))
-Description: What the package does (one paragraph).
+Description: A idéia do  pacote é gerar o produto final para análises necessárias para gerar relatórios de consultoria ambiental a partir de coletas diferente grupos taxônomicos de fauna.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

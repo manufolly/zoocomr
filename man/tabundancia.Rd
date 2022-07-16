@@ -4,13 +4,14 @@
 \alias{tabundancia}
 \title{Gera uma tabela de abundância de espécies}
 \usage{
-tabundancia(x, filtro_campanha)
+tabundancia(x, campanha = campanha, especie = especie)
 }
 \arguments{
-\item{consultoria}{nome da tabela que será utilizada}
+\item{x}{nome do data frame que será utilizado no arquivo}
 
-\item{campanha}{seleciona a campanha de consultoria, quando não selecionada,
-inclui todas}
+\item{campanha}{coluna que designa o indicador ordinal referente a campanha}
+
+\item{especie}{coluna com a identificacao de todos os individuos coletados}
 }
 \value{
 uma tabela em excel
@@ -19,5 +20,5 @@ uma tabela em excel
 Gera uma tabela de abundância de espécies
 }
 \examples{
-tabundancia()
+tabundancia(consultoria)
 }

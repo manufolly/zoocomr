@@ -6,22 +6,22 @@
 \usage{
 gabundancia(
   x,
-  campanha,
-  especie,
+  campanha = campanha,
+  especie = especie,
   fill = "#ADC6CB",
   filtro_campanha = NULL,
-  theme_few,
-  axis.text,
-  axis.text.x,
-  axis.title
+  theme_few = ggthemes::theme_few(),
+  axis.text = ggplot2::element_text(size = 6, family = "Arial"),
+  axis.text.x = ggplot2::element_text(angle = 90, face = "italic"),
+  axis.title = ggplot2::element_text(size = 8)
 )
 }
 \arguments{
-\item{x}{nome da tabela que será utilizada}
+\item{x}{nome do data frame que será utilizado no arquivo}
 
 \item{campanha}{coluna que designa o indicador ordinal referente a campanha}
 
-\item{especie}{coluna com a identificacao de todos os individuos coletados}
+\item{especie}{coluna com a identificação de todos os indivíduos coletados}
 
 \item{filtro_campanha}{seleciona a campanha de consultoria, quando não selecionada,
 inclui todas}

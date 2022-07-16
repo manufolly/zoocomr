@@ -14,7 +14,11 @@
 #'
 #' @examples riqueza(consultoria)
 riqueza <- function(x, localidade = localidade, especie = especie,
-                    mutate_at, diversidade, Localidade = Localidade) {
+                    mutate_at, diversidade,
+                    Localidade = c("Chiador", "Duas Barras", "Macaé",
+                                     "Nova Friburgo", "Sumidouro",
+                                     "Trajano de Moraes"))
+  {
 riqueza <- x %>%
   dplyr::select({{localidade}}, {{especie}}) %>%
   dplyr::count({{localidade}}, {{especie}}) %>%
@@ -35,13 +39,13 @@ simpson_res <- vegan::diversity((riqueza[,2:68]), index = "simpson",
                                 MARGIN = 1)
 Pielou <- shannon_res/log(vegan::specnumber(riqueza))
 diversidade <- base::data.frame(
-  Localidade = {{c("Chiador", "Duas Barras", "Macaé", "Nova Friburgo",
-                 "Sumidouro","Trajano de Moraes")}},
+  Localidade = Localidade,
   Margalef = Margalef,
   Menhinick = Menhinick,
   Shannon = shannon_res,
   Simpson = simpson_res,
   Pielou = Pielou)
 diversidade <- writexl::write_xlsx(diversidade, "C:/Curso R/pacotes/zoocomr/results/diversidade.xlsx")
+
 diversidade
 }
