@@ -7,22 +7,22 @@
 # "bray", "kulczynski", "jaccard", "gower", "altGower", "morisita", "horn",
 # "mountford", "raup", "binomial", "chao", "cao", "mahalanobis", "chisq",
 # "chord", "aitchison", or "robust.aitchison"
-#' @param method2
+#' @param method2 método do hclust
 #' @param labels descreve as legendas das localidades que serão as identificações dos terminais dos gráficos
-#' @param ylab
+#' @param ylab legenda do eixo y
 #'
 #' @return um gráfico
 #' @export
 #'
-#' @examples similaridade(consultoria)
+#' @examples similaridade(consultoria, localidade = localidade, especie = especie, method = "bray", method2 = "average", labels = c("Chiador", "Duas Barras", "Macaé", "Nova Friburgo",
+#'          "Sumidouro", "Trajano de Moraes"), ylab = "Similaridade (índice de Bray-Curtis)", xlab = "localidades", sub = "similaridade")
+
 similaridade <- function(x, localidade = localidade, especie = especie,
                     method = "bray", method2 = "average",
                     labels = c("Chiador", "Duas Barras", "Macaé", "Nova Friburgo",
                        "Sumidouro", "Trajano de Moraes"),
                     ylab = "Similaridade (índice de Bray-Curtis)", xlab, sub)
   {
-x <- readxl::read_excel("C:/Curso R/pacotes/tabela.xlsx") %>%
-    janitor::clean_names()
 riqueza <- x %>%
     dplyr::select({{localidade}}, {{especie}}) %>%
     dplyr::count({{localidade}}, {{especie}}) %>%
