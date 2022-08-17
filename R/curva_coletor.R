@@ -9,7 +9,10 @@
 #' @return um gráfico
 #' @export
 #'
-#' @examples coletor(consultoria, campanha, especie, at=c(1:4), labels=c("Primeira", "Segunda", "Terceira", "Quarta"))
+#' @examples
+#' \dontrun{
+#' coletor(consultoria, campanha, especie, at=c(1:4), labels=c("Primeira", "Segunda", "Terceira", "Quarta"))
+#' }
 coletor <- function(x, campanha, especie, at, labels)
   {
 rare <- x %>%

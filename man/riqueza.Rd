@@ -37,5 +37,7 @@ Gera uma tabela com os indices de riqueza (Margalef, Menhinick)
 e diversidade (Shannon, Simpson, Pielou)
 }
 \examples{
+\dontrun{
 riqueza(consultoria)
+}
 }

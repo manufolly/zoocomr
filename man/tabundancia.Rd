@@ -20,5 +20,7 @@ uma tabela em excel
 Gera uma tabela de abundância de espécies
 }
 \examples{
+\dontrun{
 tabundancia(consultoria)
+}
 }

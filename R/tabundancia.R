@@ -7,7 +7,10 @@
 #' @return uma tabela em excel
 #' @export
 #'
-#' @examples tabundancia(consultoria)
+#' @examples
+#' \dontrun{
+#' tabundancia(consultoria)
+#' }
 tabundancia <- function(x, campanha = campanha, especie = especie) {
   abundancia <- x %>%
     dplyr::select({{campanha}}, {{especie}}) %>%
