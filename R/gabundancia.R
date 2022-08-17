@@ -9,8 +9,10 @@
 #' @return um gráfico
 #' @export
 #'
-#' @examples gabundancia(consultoria, filtro_campanha = "primeira")
-#'
+#' @examples
+#' \dontrun{
+#'gabundancia(consultoria, filtro_campanha = "primeira")
+#'}
 gabundancia <- function(x, campanha = campanha, especie = especie,
                         fill = "#ADC6CB", filtro_campanha = NULL,
                         theme_few = ggthemes::theme_few(),

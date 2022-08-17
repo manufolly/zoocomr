@@ -33,6 +33,7 @@ um gráfico
 Gera um gráfico de abundância de espécies
 }
 \examples{
+\dontrun{
 gabundancia(consultoria, filtro_campanha = "primeira")
-
+}
 }

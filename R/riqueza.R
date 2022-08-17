@@ -12,7 +12,10 @@
 #' @return uma tabela em excel
 #' @export
 #'
-#' @examples riqueza(consultoria)
+#' @examples
+#' \dontrun{
+#' riqueza(consultoria)
+#' }
 riqueza <- function(x, localidade = localidade, especie = especie,
                     mutate_at, diversidade,
                     Localidade = c("Chiador", "Duas Barras", "Macaé",

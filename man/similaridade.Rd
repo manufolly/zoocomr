@@ -26,9 +26,11 @@ similaridade(
 
 \item{method}{seleciona o método do pacote vegan::vegdist, podendo ser:"manhattan", "euclidean", "canberra", "clark",}
 
+\item{method2}{método do hclust}
+
 \item{labels}{descreve as legendas das localidades que serão as identificações dos terminais dos gráficos}
 
-\item{ylab}{}
+\item{ylab}{legenda do eixo y}
 }
 \value{
 um gráfico
@@ -37,5 +39,6 @@ um gráfico
 Gera um gráfico de similaridade com o índice de Bray-Curtis
 }
 \examples{
-similaridade(consultoria)
+similaridade(consultoria, localidade = localidade, especie = especie, method = "bray", method2 = "average", labels = c("Chiador", "Duas Barras", "Macaé", "Nova Friburgo",
+         "Sumidouro", "Trajano de Moraes"), ylab = "Similaridade (índice de Bray-Curtis)", xlab = "localidades", sub = "similaridade")
 }
