@@ -24,3 +24,4 @@
 #'   @source \url{https://github.com/manufolly/consultoria/blob/main/tabela.xlsx}
 #'
 #'
+"consultoria"
